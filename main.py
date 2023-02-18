@@ -19,13 +19,17 @@ def find_mismatch(text):
 
         if next in ")]}":
             # Process closing bracket, write your code here
-            if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1].char, next):
-             
-                print("ir tukšs")
+            if not opening_brackets_stack:
+                
+                return i + 1:
+                
+            if not are_matching(opening_brackets_stack[-1].char, next):
+                
                 return i + 1 
             opening_brackets_stack.pop()
-        if opening_brackets_stack:
-            return opening_brackets_stack[0].position
+            if opening_brackets_stack:
+                
+                return opening_brackets_stack[0].position
         return "Success"
 
 
@@ -34,6 +38,10 @@ def main():
     if text[0] == "I":
         text = input()
         mismatch = find_mismatch(text)
+        if not mismatch :
+            print("Success")
+        else:
+            print(mismatch)
     # Printing answer, write your code here
     
 
