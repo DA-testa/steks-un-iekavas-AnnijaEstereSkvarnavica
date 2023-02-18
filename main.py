@@ -23,12 +23,17 @@ def find_mismatch(text):
              
                 print("ir tukšs")
                 return i + 1 
-            pass
+            opening_brackets_stack.pop()
+        if opening_brackets_stack:
+            return opening_brackets_stack[0].position
+        return "Success"
 
 
 def main():
     text = input()
-    mismatch = find_mismatch(text)
+    if text[0] == "I":
+        text = input()
+        mismatch = find_mismatch(text)
     # Printing answer, write your code here
     
 
