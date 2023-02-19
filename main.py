@@ -41,11 +41,7 @@ def main():
         if mismatch:
             print(mismatch)
         else:
-            print("Success")
-        #if not mismatch :
-            #print("Success")
-        #else:
-            #print(mismatch)
+                        
     # Printing answer, write your code here
     
 
